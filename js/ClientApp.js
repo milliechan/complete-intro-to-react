@@ -5,6 +5,7 @@ var h1 = React.DOM.h1
 
 // all components in react must return a component and have a render function
 // MyTitle is a composite component
+
 var MyTitle = React.createClass({
   render () {
     return (
