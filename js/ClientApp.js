@@ -1,7 +1,9 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var div = React.DOM.div
 var MyTitle = require('./MyTitle')
+
+var div = React.DOM.div
+
 
 // all components in react must return a component and have a render function
 // MyTitle is a composite component
