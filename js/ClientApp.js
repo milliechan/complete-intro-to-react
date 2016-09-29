@@ -24,7 +24,7 @@ var MyFirstComponent = (
   div(null,
     MyTitleFact({title: 'Props are great!', color: 'rebeccapurple'}),
     React.createElement(MyTitle, {title: 'Use props everywhere!', color: 'mediumaquamarine'}),
-    ce(MyTitle, {title: 'Props are the best!', color: 'papayawhip'})
+    ce(MyTitle, {title: 'Props are the best!', color: 'peru'})
 
     )
   )
