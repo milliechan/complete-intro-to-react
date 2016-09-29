@@ -1,3 +1,4 @@
+var React = require ('react') //pulling in react into this file
 var div = React.DOM.div
 var h1 = React.DOM.h1
 
