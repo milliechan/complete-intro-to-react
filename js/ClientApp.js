@@ -4,10 +4,8 @@ var MyTitle = require('./MyTitle')
 
 var div = React.DOM.div
 
-
 // all components in react must return a component and have a render function
 // MyTitle is a composite component
-
 
 var MyTitleFact = React.createFactory(MyTitle)
 // factory when called gives you back the component
