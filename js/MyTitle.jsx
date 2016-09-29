@@ -1,7 +1,7 @@
-var React = require('react')
-// pulling in react into this file
-var div = React.DOM.div
-var h1 = React.DOM.h1
+const React = require('react')
+// pulling in react into this file. use const instead of var because you dont plan on changing this now; if you do need to change it, update it to let
+const div = React.DOM.div
+const h1 = React.DOM.h1
 
 var MyTitle = React.createClass({
   render () {
