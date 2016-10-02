@@ -1,23 +1,26 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
-var MyTitle = require('./MyTitle')
+const React = require('react')
+const ReactDOM = require('react-dom')
+const Landing = require('./Landing')
+const Search = require('./Search')
+const Layout = require('./Layout')
+const { Router, Route, IndexRoute, hashHistory } = require('react-router')
 
-var div = React.DOM.div
+// const Router = ReactRouter.Router
+// const Route = ReactRouter.Route
+// const hashHistory = ReactRouter.hashHistory
 
 // all components in react must return a component and have a render function
 // MyTitle is a composite component
-
-var MyTitleFact = React.createFactory(MyTitle)
+// var MyTitleFact = React.createFactory(MyTitle)
 // factory when called gives you back the component
-var ce = React.createElement
 
-var MyFirstComponent = (
-  div(null,
-    MyTitleFact({title: 'Props are great!', color: 'rebeccapurple'}),
-    React.createElement(MyTitle, {title: 'Use props everywhere!', color: 'mediumaquamarine'}),
-    ce(MyTitle, {title: 'Props are the best!', color: 'peru'})
+const App = () => (
+  <Router history={hashHistory}>
+    <Route path='/' component={Layout}>
+      <IndexRoute component={Landing} />
+      <Route path='/search' component={Search} />
+    </Route>
+  </Router>
+)
 
-    )
-  )
-
-ReactDOM.render(MyFirstComponent, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
